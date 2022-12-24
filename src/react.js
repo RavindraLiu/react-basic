@@ -1,7 +1,13 @@
 import { REACT_ELEMENT } from "./constants";
 import { wrapToVdom } from "./utils";
 import { Component } from "./Component";
-
+/**
+ *
+ * @param {*} type 元素的类型
+ * @param {*} config 元素中的props
+ * @param {*} children  元素的孩子对象
+ * @returns
+ */
 function createElement(type, config, children) {
   let key; // 用来实现DOM-DIFF, 高效快速进行DOM比较
   let ref; // 用来获取真实的DOM元素额

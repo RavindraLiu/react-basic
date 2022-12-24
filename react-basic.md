@@ -17,15 +17,24 @@
     - ReactDOM用来确保浏览器中真实的DOM数据和React元素保持一致
 
     - 源代码 ====> (babel)编译之后的代码(React.createElement) ====> createElement执行返回虚拟DOM
+    ```js
+      {
+         type: "h1",  元素的类型
+         key: null,   用来区分统一父级元素的不同儿子
+         ref: null,   用来获取真实的DOM元素
+         props: {
+            id: "title"
+            children: "hello" // 一个儿子就是字符串, 多个儿子就是数组
+         },
+
+      }
+    ```
 
 2.3 项目启动
 
-    - cross-env DISABLE_NEW_JSX_TRANSFORM=true
+    - cross-env DISABLE_NEW_JSX_TRANSFORM=true 添加禁止jsx的转换
 
-2.4 最能体现 react 核心设计的是 React16
-
-     - react17 fiber
-     - react18 加入优先级调度 并发执行
+2.4 最能体现 react 核心设计的是 React16 - react17 fiber - react18 加入优先级调度 并发执行
 
 3. 函数组件
    1, 函数组件接收一个单一的 props 对象并返回一个 React 元素
